@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.header {
+  background-color: #cee3f8;
+  padding: 10px 15px;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #a8bacd;
+  display: flex;
+  align-items: center;
+}
+
+/* Grid Layout for Main Structure */
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 400px; /* Increased comments section width */
+  gap: 10px;
+  padding: 10px;
+  height: 100vh; /* Ensure the container spans full height */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #e3eaf4;
+  padding: 15px;
+  border-right: 2px solid #a8bacd;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 5px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #336699;
+  font-weight: bold;
+}
+
+.section {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+.main-content {
+  padding: 10px;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  background-color: #cee3f8;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.nav-tabs button {
+  border: none;
+  background-color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs button.active {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.nav-tabs button:hover {
+  background-color: #ddd;
+}
+
+/* Articles */
+.article {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.article:hover {
+  background-color: #f0f0f0;
+}
+
+/* Comments & Search Wrapper */
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 320px; /* Adjust width for better alignment */
+}
+
+/* Search Input */
+.search-container input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Search Button */
+.search-container button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Comments Section */
+.comments-section {
+  background-color: #ffffff;
+  padding: 10px;
+  border-left: 2px solid #a8bacd;
+  width: 100%;
+  height: 100vh; /* Full height */
+  box-sizing: border-box; /* Ensure padding doesn’t increase size */
+  overflow-y: auto; /* Allow scrolling if needed */
+  max-width: 800px; /* Increased width */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .container {
+      grid-template-columns: 200px 1fr;
+  }
+  .comments-section {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
+  .sidebar {
+      display: none;
+  }
+}
