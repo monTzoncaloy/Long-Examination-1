@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Page Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,171 +7,125 @@ body {
 }
 
 /* Header */
-.header {
-  background-color: #cee3f8;
-  padding: 10px 15px;
-  font-size: 24px;
-  font-weight: bold;
-  border-bottom: 2px solid #a8bacd;
-  display: flex;
-  align-items: center;
+header {
+  background-color: #c8d8e4;
+  padding: 15px;
 }
 
-/* Grid Layout for Main Structure */
+h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+/* Container Layout */
 .container {
-  display: grid;
-  grid-template-columns: 250px 1fr 400px; /* Increased comments section width */
-  gap: 10px;
-  padding: 10px;
-  height: 100vh; /* Ensure the container spans full height */
+  display: flex;
+  padding: 20px;
 }
 
 /* Sidebar */
 .sidebar {
-  background-color: #e3eaf4;
+  width: 200px;
+  background-color: #e6e6e6;
   padding: 15px;
-  border-right: 2px solid #a8bacd;
+  border-radius: 5px;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.sidebar ul li {
-  padding: 5px 0;
+.sidebar li {
+  padding: 10px 0;
 }
 
-.sidebar ul li a {
+.sidebar a {
   text-decoration: none;
-  color: #336699;
+  color: #000;
   font-weight: bold;
-}
-
-.section {
-  background-color: #ffffff;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Main Content */
-.main-content {
-  padding: 10px;
+.content {
+  flex: 2;
+  padding: 20px;
 }
 
-/* Navigation Tabs */
-.nav-tabs {
-  background-color: #cee3f8;
-  padding: 5px;
-  border-radius: 5px;
-  display: flex;
-  gap: 5px;
-  margin-bottom: 10px;
+/* Tabs */
+.tabs {
+  margin-bottom: 15px;
 }
 
-.nav-tabs button {
+.tabs button {
+  padding: 8px 15px;
+  margin-right: 5px;
   border: none;
   background-color: #fff;
-  padding: 8px 12px;
   cursor: pointer;
-  font-weight: bold;
-  border-radius: 3px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-tabs button.active {
-  background-color: #ff4500;
-  color: #fff;
-}
-
-.nav-tabs button:hover {
-  background-color: #ddd;
-}
-
-/* Articles */
-.article {
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.article:hover {
-  background-color: #f0f0f0;
-}
-
-/* Comments & Search Wrapper */
-.comments-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
-  height: 100%;
 }
 
 /* Search Bar */
-.search-container {
+.search-bar {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  justify-content: flex-end;
   margin-bottom: 10px;
-  padding: 5px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  width: 100%;
-  max-width: 320px; /* Adjust width for better alignment */
 }
 
-/* Search Input */
-.search-container input {
-  width: 100%;
+.search-bar input {
   padding: 5px;
+  width: 200px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
-/* Search Button */
-.search-container button {
+.search-bar button {
+  padding: 5px 10px;
   background-color: #ff4500;
   color: white;
   border: none;
-  padding: 5px 10px;
   cursor: pointer;
-  border-radius: 3px;
+  margin-left: 5px;
 }
 
-/* Comments Section */
+/* Post Styling */
+.post {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Thumbnail Styling */
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.post-content {
+  flex: 1;
+}
+
 .comments-section {
-  background-color: #ffffff;
+  width: 800px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-left: 20px;
+}
+
+.comment {
   padding: 10px;
-  border-left: 2px solid #a8bacd;
-  width: 100%;
-  height: 100vh; /* Full height */
-  box-sizing: border-box; /* Ensure padding doesn’t increase size */
-  overflow-y: auto; /* Allow scrolling if needed */
-  max-width: 800px; /* Increased width */
+  border-bottom: 1px solid #ddd;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-  .container {
-      grid-template-columns: 200px 1fr;
-  }
-  .comments-section {
-      display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-      grid-template-columns: 1fr;
-  }
-  .sidebar {
-      display: none;
-  }
+.comment:last-child {
+  border-bottom: none;
 }

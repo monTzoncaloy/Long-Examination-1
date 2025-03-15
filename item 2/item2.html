@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>reddit</h1>
-    </div>
+    </header>
+
     <div class="container">
-        <div class="sidebar">
+        <aside class="sidebar">
             <ul>
                 <li><a href="#">FRONT PAGE</a></li>
                 <li><a href="#">PICS</a></li>
@@ -19,73 +20,60 @@
                 <li><a href="#">TECHNOLOGY</a></li>
                 <li><a href="#">ASK REDDIT</a></li>
                 <li><a href="#">FUNNY</a></li>
-                <li><a href="#">WTF</a></li>
-                <li><a href="#">IAMA</a></li>
-                <li><a href="#">WORLD NEWS</a></li>
-                <li><a href="#">TODAYILEARNED</a></li>
-                <li><a href="#">WORLDNEWS</a></li>
-                <li><a href="#">WEBDESIGN</a></li>
-                <li><a href="#">ATHEIST</a></li>
-                <li><a href="#">FFFFFFUUUUUUUUUU</a></li>
             </ul>
-            <div class="section">
-                <a href="#">Submit a link</a>
-                to anything interesting: news article, blog entry, video, picture...
-            </div>
-            <div class="section">
-                <a href="#">Create Community</a>
-                for your LARPing community... because nothing in life is free (except reddit here on the side)
-            </div>
-        </div>
-        <div class="main-content">
-            <div class="nav-tabs">
-                <button onclick="setActive(this)">what's hot</button>
-                <button onclick="setActive(this)">new</button>
-                <button onclick="setActive(this)">controversial</button>
-                <button onclick="setActive(this)">top</button>
-                <button onclick="setActive(this)">saved</button>
-            </div>
-            <div class="article" onclick="location.href='#';">
-                <h2>What do you call 60 guys watching the Super Bowl at home?</h2>
-                <p>Submitted 11 hours ago by Krispykrackers</p>
-            </div>
-            <div class="article" onclick="location.href='#';">
-                <h2>IAm the guy who created this design AMA</h2>
-                <p>Submitted 5 hours ago by Thunderland77</p>
-            </div>
-            <div class="article" onclick="location.href='#';">
-                <h2>Use this Chrome addon to block major third parties...</h2>
-                <p>Submitted 9 hours ago by Krispykrackers</p>
-            </div>
-            <div class="article" onclick="location.href='#';">
-                <h2>Thanks, Sally, That blowjob was... SFW</h2>
-                <p>Submitted 11 hours ago by Maiko to gaming</p>
-            </div>
-        </div>
+        </aside>
 
-        <div class="comments-container">
-            <!-- Search Bar -->
-            <div class="search-container">
+        <main class="content">
+            <div class="tabs">
+                <button>what's hot</button>
+                <button>new</button>
+                <button>controversial</button>
+                <button>top</button>
+                <button>saved</button>
+            </div>
+
+            <div class="search-bar">
                 <input type="text" placeholder="Search...">
                 <button>🔍</button>
             </div>
 
-            <div class="comments-section">
-                <h3>Comments</h3>
+            <div class="post">
+                <img src="thumb1.jpg" alt="Thumbnail" class="thumbnail">
+                <div class="post-content">
+                    <h3>What do you call 60 guys watching the Super Bowl at home?</h3>
+                    <p>Submitted 11 hours ago by Krispykrackers</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="thumb2.jpg" alt="Thumbnail" class="thumbnail">
+                <div class="post-content">
+                    <h3>IAm the guy who created this design AMA</h3>
+                    <p>Submitted 5 hours ago by Thunderland77</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="thumb3.jpg" alt="Thumbnail" class="thumbnail">
+                <div class="post-content">
+                    <h3>Use this Chrome addon to block major third parties...</h3>
+                    <p>Submitted 9 hours ago by Krispykrackers</p>
+                </div>
+            </div>
+        </main>
+
+        <aside class="comments-section">
+            <h2>Comments</h2>
+            <div class="comment">
                 <p><strong>UserMember47:</strong> Wow, this is the best Reddit redesign I’ve seen that doesn’t suck.</p>
+            </div>
+            <div class="comment">
                 <p><strong>Thunderland77:</strong> Thanks, I appreciate it! Glad you like the layout.</p>
+            </div>
+            <div class="comment">
                 <p><strong>SomeUser123:</strong> I like how the comments stand out more in this design.</p>
             </div>
-        </div>
+        </aside>
     </div>
-
-    <script>
-        function setActive(button) {
-            document.querySelectorAll('.nav-tabs button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            button.classList.add('active');
-        }
-    </script>
 </body>
 </html>

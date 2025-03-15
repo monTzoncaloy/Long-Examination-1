@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazo De Mercedes Recipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="header.jpg" alt="Brazo de Mercedes" class="header-bg">
+        
+        <div class="header-content">
+            
+        </div>
+    </header>
+    
+
+    <main class="carousel">
+        <section id="step1" class="step active">
+            <h2>Step 1: Preparing the Meringue Base</h2>
+            <img src="step1.jpg" alt="Step 1">
+            <p>Mix egg whites and 1/2 teaspoon of cream of tartar in a bowl. Beat until soft peaks form.</p>
+            <button class="next" onclick="showStep(2)">Next →</button>
+        </section>
+
+        <section id="step2" class="step">
+            <h2>Step 2: Sweetening the Meringue</h2>
+            <img src="step2.jpg" alt="Step 2">
+            <p>Gradually add sugar while mixing. Beat until semi-firm texture forms.</p>
+            <button class="prev" onclick="showStep(1)">← Back</button>
+            <button class="next" onclick="showStep(3)">Next →</button>
+        </section>
+
+        <section id="step3" class="step">
+            <h2>Step 3: Prepping for Baking</h2>
+            <img src="step3.jpg" alt="Step 3">
+            <p>Preheat oven to 350°F (175°C). Line a baking sheet with wax paper and lightly grease it.</p>
+            <button class="prev" onclick="showStep(2)">← Back</button>
+            <button class="next" onclick="showStep(4)">Next →</button>
+        </section>
+
+        <section id="step4" class="step">
+            <h2>Step 4: Spreading and Baking the Meringue</h2>
+            <img src="step4.jpg" alt="Step 4">
+            <p>Spread the meringue evenly on wax paper. Bake for 20-22 minutes until golden brown.</p>
+            <button class="prev" onclick="showStep(3)">← Back</button>
+            <button class="next" onclick="showStep(5)">Next →</button>
+        </section>
+
+        <section id="step5" class="step">
+            <h2>Step 5: Making the Filling</h2>
+            <img src="step5.jpg" alt="Step 5">
+            <p>Cook egg yolks and condensed milk until thick. Stir in vanilla extract.</p>
+            <button class="prev" onclick="showStep(4)">← Back</button>
+            <button class="next" onclick="showStep(6)">Next →</button>
+        </section>
+
+        <section id="step6" class="step">
+            <h2>Step 6: Rolling the Cake</h2>
+            <img src="step6.jpg" alt="Step 6">
+            <p>Spread the filling over the meringue, roll it carefully, and transfer it to a serving plate.</p>
+            <button class="prev" onclick="showStep(5)">← Back</button>
+            <button class="restart" onclick="showStep(1)">Restart</button>
+        </section>
+    </main>
+
+    <script>
+        function showStep(stepNumber) {
+            let steps = document.querySelectorAll('.step');
+
+            // Hide all steps
+            steps.forEach(step => step.style.display = "none");
+
+            // Show the selected step
+            document.getElementById(`step${stepNumber}`).style.display = "block";
+        }
+
+        // Show Step 1 by default when page loads
+        document.addEventListener("DOMContentLoaded", function () {
+            showStep(1);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    /* background-color: #ffddb4; */
+    background: url('brazobg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header */
+/* Header Container */
+header {
+    background: #ffcc80;
+    padding: 0;  /* Remove any default padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden; /* Ensures no spacing issues */
+    position: relative; /* Allows absolute positioning for the image */
+}
+
+/* Header Background Image */
+.header-bg {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0;  /* Remove any default margins */
+    padding: 0;
+}
+
+/* Header Title */
+h1 {
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+/* Brazo de Mercedes Image */
+.header-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Description */
+.header-description {
+    font-size: 14px;
+    color: #6d4c41;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    min-height: 220px; /* Ensures no text is cut off */
+}
+
+/* Steps */
+.step {
+    display: none; /* Hidden by default */
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Show only the active step */
+.step.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Buttons */
+button {
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Step Images */
+.step img {
+    width: 100%; /* Responsive */
+    max-width: 400px; /* Adjust this value to make images smaller */
+    height: auto; /* Keeps aspect ratio */
+    display: block;
+    margin: 10px auto; /* Centers the image */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.next { background: #f69021; color: white; }
+.prev { background: #60310f; color: white; }
+.restart { background: #dc3545; color: white; }
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
