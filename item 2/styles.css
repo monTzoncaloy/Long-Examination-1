@@ -1,4 +1,4 @@
-/* General Page Styling */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,125 +7,171 @@ body {
 }
 
 /* Header */
-header {
-  background-color: #c8d8e4;
-  padding: 15px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
-/* Container Layout */
-.container {
+.header {
+  background-color: #cee3f8;
+  padding: 10px 15px;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #a8bacd;
   display: flex;
-  padding: 20px;
+  align-items: center;
+}
+
+/* Grid Layout for Main Structure */
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 400px; /* Increased comments section width */
+  gap: 10px;
+  padding: 10px;
+  height: 100vh; /* Ensure the container spans full height */
 }
 
 /* Sidebar */
 .sidebar {
-  width: 200px;
-  background-color: #e6e6e6;
+  background-color: #e3eaf4;
   padding: 15px;
-  border-radius: 5px;
+  border-right: 2px solid #a8bacd;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.sidebar li {
-  padding: 10px 0;
+.sidebar ul li {
+  padding: 5px 0;
 }
 
-.sidebar a {
+.sidebar ul li a {
   text-decoration: none;
-  color: #000;
+  color: #336699;
   font-weight: bold;
 }
 
+.section {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Main Content */
-.content {
-  flex: 2;
-  padding: 20px;
+.main-content {
+  padding: 10px;
 }
 
-/* Tabs */
-.tabs {
-  margin-bottom: 15px;
-}
-
-.tabs button {
-  padding: 8px 15px;
-  margin-right: 5px;
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-/* Search Bar */
-.search-bar {
+/* Navigation Tabs */
+.nav-tabs {
+  background-color: #cee3f8;
+  padding: 5px;
+  border-radius: 5px;
   display: flex;
-  justify-content: flex-end;
+  gap: 5px;
   margin-bottom: 10px;
 }
 
-.search-bar input {
+.nav-tabs button {
+  border: none;
+  background-color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs button.active {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.nav-tabs button:hover {
+  background-color: #ddd;
+}
+
+/* Articles */
+.article {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.article:hover {
+  background-color: #f0f0f0;
+}
+
+/* Comments & Search Wrapper */
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
   padding: 5px;
-  width: 200px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 320px; /* Adjust width for better alignment */
+}
+
+/* Search Input */
+.search-container input {
+  width: 100%;
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
-.search-bar button {
-  padding: 5px 10px;
+/* Search Button */
+.search-container button {
   background-color: #ff4500;
   color: white;
   border: none;
+  padding: 5px 10px;
   cursor: pointer;
-  margin-left: 5px;
+  border-radius: 3px;
 }
 
-/* Post Styling */
-.post {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
-/* Thumbnail Styling */
-.thumbnail {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  margin-right: 15px;
-  border-radius: 5px;
-}
-
-.post-content {
-  flex: 1;
-}
-
+/* Comments Section */
 .comments-section {
-  width: 800px;
-  background-color: white;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  margin-left: 20px;
-}
-
-.comment {
+  background-color: #ffffff;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-left: 2px solid #a8bacd;
+  width: 100%;
+  height: 100vh; /* Full height */
+  box-sizing: border-box; /* Ensure padding doesn’t increase size */
+  overflow-y: auto; /* Allow scrolling if needed */
+  max-width: 800px; /* Increased width */
 }
 
-.comment:last-child {
-  border-bottom: none;
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .container {
+      grid-template-columns: 200px 1fr;
+  }
+  .comments-section {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
+  .sidebar {
+      display: none;
+  }
 }
